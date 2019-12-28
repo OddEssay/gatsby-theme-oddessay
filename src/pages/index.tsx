@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import {Text} from '../components/typeography'
+import {Heading,Text} from '../components/typeography'
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -22,7 +22,7 @@ export default class extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
       <div>
-        <h1>Hi people</h1>
+        <Heading title='A TailwindTitle!' />
         <Text>
           Welcome to your new{' '}
           <strong>{this.props.data.site.siteMetadata.title}</strong> site.

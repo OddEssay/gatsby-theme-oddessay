@@ -1,3 +1,5 @@
 h1.heading {
     font-family: Oswald;
+    @apply text-4xl;
+    @apply text-blue-400;
 }

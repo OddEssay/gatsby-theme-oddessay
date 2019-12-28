@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = ({ config, mode }) => {
     config.module.rules.push({
         test: /\.(ts|tsx)$/,
@@ -12,6 +14,22 @@ module.exports = ({ config, mode }) => {
                 loader: require.resolve('react-docgen-typescript-loader'),
             }
         ],
+    });
+    config.module.rules.push({
+        test: /\.css$/,
+        use: [
+            {
+                loader: "postcss-loader",
+                options: {
+                    ident: "postcss",
+                    plugins: [
+                        require("tailwindcss"),
+                        require("autoprefixer")
+                    ]
+                }
+            }
+        ],
+        include: path.resolve(__dirname, "../")
     });
     config.resolve.extensions.push('.ts', '.tsx');
     return config;
