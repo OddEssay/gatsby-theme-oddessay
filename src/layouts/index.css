@@ -5,3 +5,6 @@
 @tailwind components;
 
 @tailwind utilities;
+body {
+    @apply text-gray-800 bg-gray-100;
+}
