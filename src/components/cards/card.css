@@ -1,0 +1,3 @@
+div.card {
+    @apply shadow-md rounded m-10 p-4 bg-gray-100;
+}
