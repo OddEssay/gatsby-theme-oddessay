@@ -34,3 +34,4 @@ addDecorator(
         source: true,
     })
 );
+global.__PATH_PREFIX__ = ""
