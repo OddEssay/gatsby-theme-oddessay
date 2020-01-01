@@ -1,3 +1,12 @@
-div.card {
-    @apply shadow-md rounded m-10 p-4 bg-gray-100;
+div.card-content:nth-child(1) {
+    @apply rounded-t
+}
+div.card-content:last-child {
+    @apply rounded-b
+}
+div.card-title {
+    @apply text-gray-900
+}
+.dark div.card-title {
+    @apply text-gray-100
 }
