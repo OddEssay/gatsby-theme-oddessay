@@ -34,7 +34,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@storybook/react": "^5.2.8",
+    "@storybook/react": "^5.3.4",
     "prettier": "^1.8.2"
   }
 }
