@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
   "dependencies": {
-    "@storybook/addon-info": "^5.2.8",
+    "@storybook/addon-info": "^5.3.4",
     "@types/node": "12.12.14",
     "@types/react": "16.9.15",
     "@types/react-dom": "16.9.4",
