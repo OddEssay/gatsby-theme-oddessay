@@ -20,7 +20,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "tailwindcss": "^1.1.4",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "keywords": [
     "gatsby, typescript, oddessay"
