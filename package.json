@@ -13,7 +13,7 @@
     "gatsby": "2.18.23",
     "gatsby-link": "2.2.28",
     "gatsby-plugin-postcss": "^2.1.19",
-    "gatsby-plugin-react-helmet": "3.1.16",
+    "gatsby-plugin-react-helmet": "3.1.21",
     "gatsby-plugin-typescript": "2.1.26",
     "gatsby-transformer-typescript-css-modules": "^1.0.14",
     "react-docgen-typescript-loader": "^3.6.0",
