@@ -4,12 +4,14 @@
   "version": "1.0.0",
   "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
   "dependencies": {
-    "@storybook/addon-info": "^5.2.8",
-    "@types/node": "13.1.7",
+    "@storybook/addon-info": "^5.3.6",
+    "@storybook/react": "^5.3.6",
     "@types/react": "16.9.17",
+    "@types/node": "13.1.7",
     "@types/react-dom": "16.9.4",
     "@types/react-helmet": "^5.0.15",
     "babel-loader": "^8.0.6",
+    "babel-preset-react-app": "^9.1.0",
     "gatsby": "2.18.23",
     "gatsby-link": "2.2.28",
     "gatsby-plugin-postcss": "^2.1.19",
@@ -34,7 +36,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@storybook/react": "^5.2.8",
     "prettier": "^1.8.2"
   }
 }
