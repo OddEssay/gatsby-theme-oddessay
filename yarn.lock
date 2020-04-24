@@ -3427,10 +3427,10 @@ babel-plugin-react-docgen@^4.0.0:
     react-docgen "^5.0.0"
     recast "^0.14.7"
 
-babel-plugin-remove-graphql-queries@^2.8.2, babel-plugin-remove-graphql-queries@^2.8.3:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.8.3.tgz#90bd811e5912348e9c158113e2c0774a8d5ac8fb"
-  integrity sha512-BVux5WSXstiZzZuff7hD7F3WjBPq4V/sDgsT7EosXUNAoShht3msg1pFhJx+Id4jq/VNGEy+lfUzmAvBklIYeA==
+babel-plugin-remove-graphql-queries@^2.8.3, babel-plugin-remove-graphql-queries@^2.8.4:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.8.4.tgz#bd92c99d9407a2893329b175ba963c155caefa9d"
+  integrity sha512-aWjPpcdp81F4F47vs48lbJjppU61dCUC676+FbqwRyY3GpK3yOXNPOyij/LOQyH3Q7tH+m6LCv4vVBs9adYFAQ==
 
 babel-plugin-syntax-jsx@^6.18.0:
   version "6.18.0"
@@ -7123,10 +7123,10 @@ gatsby-plugin-react-helmet@3.2.4:
   dependencies:
     "@babel/runtime" "^7.8.7"
 
-gatsby-plugin-typescript@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.3.2.tgz#874af13109b41279fa87ece592b82ae88c00719d"
-  integrity sha512-WT960Ex/CKWXlBnqjvIh6Mfrz8XkG8LCudeRvVjbPfK1hVzwor1JmuOggf2/G7Q1JLXCvTcHLbT9q1P9qSRkbg==
+gatsby-plugin-typescript@2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.3.4.tgz#e11ba1623ff3075e916ff8fc89ea01ec66000a5a"
+  integrity sha512-GyM1kV6JSmDF+tZ+TSG5LOJill7/bNsB6o8mHwI8ZDsNPCe4789jEMzJbNPQ0ZVP/Np74/CUSqd4SQpVUe23xw==
   dependencies:
     "@babel/core" "^7.8.7"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.8.3"
@@ -7134,7 +7134,7 @@ gatsby-plugin-typescript@2.3.2:
     "@babel/plugin-proposal-optional-chaining" "^7.8.3"
     "@babel/preset-typescript" "^7.8.3"
     "@babel/runtime" "^7.8.7"
-    babel-plugin-remove-graphql-queries "^2.8.2"
+    babel-plugin-remove-graphql-queries "^2.8.4"
 
 gatsby-react-router-scroll@^2.2.2:
   version "2.2.2"
