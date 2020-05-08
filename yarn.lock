@@ -6951,10 +6951,10 @@ gatsby-recipes@^0.1.8:
     ws "^7.2.5"
     xstate "^4.9.1"
 
-gatsby-source-datocms@^2.1.23:
-  version "2.1.23"
-  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.1.23.tgz#eb60644ea0fa40d4c6caf9c2f6ae4c67e6a335cb"
-  integrity sha512-zPPxVmZqdD7O4CXkmuKXVEk1tShuzeFBe8jsjsk0kapxkw/Zj5aMUhsVU/Ub+LBw9inkt9dN0obtKFn05H2H+g==
+gatsby-source-datocms@^2.1.27:
+  version "2.1.27"
+  resolved "https://registry.yarnpkg.com/gatsby-source-datocms/-/gatsby-source-datocms-2.1.27.tgz#c2e52637af7e109dd58ee8931323b875ff6b3554"
+  integrity sha512-3f+gQhdF8ODhfrMcQdiC4ojQS9HRIebOKkaWy7QUUtbpry0rPDzS49afcmoTsxpPpi6X49x7cQjq5V3IWHlg4Q==
   dependencies:
     core-js "^3.2.1"
     datocms-client "~3.0.10"
@@ -12399,12 +12399,7 @@ regenerator-runtime@^0.11.0:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
 
-regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
-  integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
-
-regenerator-runtime@^0.13.4:
+regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3, regenerator-runtime@^0.13.4:
   version "0.13.5"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.5.tgz#d878a1d094b4306d10b9096484b33ebd55e26697"
   integrity sha512-ZS5w8CpKFinUzOwW3c83oPeVXoNsrLsaCoLtJvAClH135j/R77RuymhiSErhm2lKcwSCIpmvIWSbDkIfAqKQlA==
