@@ -21,7 +21,7 @@
     "gatsby-transformer-typescript-css-modules": "^1.0.14",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0",
     "tailwindcss": "^1.4.5",
     "typescript": "^3.8.3"
   },
