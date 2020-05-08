@@ -11,7 +11,7 @@
     "@types/react-dom": "16.9.6",
     "@types/react-helmet": "^5.0.15",
     "babel-loader": "^8.1.0",
-    "babel-preset-react-app": "^9.1.1",
+    "babel-preset-react-app": "^9.1.2",
     "gatsby": "2.21.9",
     "gatsby-link": "2.3.5",
     "gatsby-plugin-postcss": "^2.3.0",
