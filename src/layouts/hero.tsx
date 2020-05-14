@@ -20,10 +20,16 @@ interface SectionMenuItemProps {
   section: Section;
 }
 
+const isExternalUrl = (url: string) => url.includes("http");
+
 const SectionMenuItem = ({ section }: SectionMenuItemProps) => (
   <div className="bg-gray-200 m-4 rounded shadow h-16">
     <Title title={section.title} />
-    <Link to={section.link}>{section.link}</Link>
+    {isExternalUrl(section.link) ? (
+      <a href={section.link}>{section.link}</a>
+    ) : (
+      <Link to={section.link}>{section.link}</Link>
+    )}
   </div>
 );
 
