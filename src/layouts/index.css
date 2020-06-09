@@ -46,8 +46,10 @@ p {
     @apply bg-gray-100;
 }
 
-code {
+pre {
     @apply bg-gray-400;
     @apply ml-6;
     @apply p-2;
+    @apply whitespace-pre;
+    @apply w-full;
 }
