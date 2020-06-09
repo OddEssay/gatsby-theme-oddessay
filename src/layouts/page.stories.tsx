@@ -20,7 +20,15 @@ end
 `;
 
 export const hello_world = () => (
-  <Page siteTitle="Hello World" pageTitle="Hi">
+  <Page
+    siteTitle="Hello World"
+    pageTitle="Hi"
+    sections={[
+      { title: 'One', link: '#' },
+      { title: 'Two', link: '#' },
+      { title: 'Three', link: '#' },
+    ]}
+  >
     <ReactMarkdown>{markdown}</ReactMarkdown>
   </Page>
 );

@@ -5,9 +5,16 @@ import Link from 'gatsby-link'; // Using this style of import to make StoryBook 
 type PageProps = {
   pageTitle: string;
   siteTitle: string;
+  sections: { link: string; title: string }[];
 };
 
-const Header = ({ siteTitle }: { siteTitle: string }) => {
+const Header = ({
+  siteTitle,
+  sections,
+}: {
+  siteTitle: string;
+  sections: { link: string; title: string }[];
+}) => {
   const [isOpen, setOpen] = useState(false);
   const toggleOpen = () => {
     console.log('Toggling', isOpen);
@@ -41,24 +48,14 @@ const Header = ({ siteTitle }: { siteTitle: string }) => {
           } flex-grow tablet:flex tablet:items-center tablet:w-auto`}
         >
           <div className="text-sm tablet:flex-grow">
-            <a
-              href="#responsive-header"
-              className="block mt-4 tablet:inline-block tablet:mt-0 text-green-200 hover:text-white mr-4"
-            >
-              Docs
-            </a>
-            <a
-              href="#responsive-header"
-              className="block mt-4 tablet:inline-block tablet:mt-0 text-green-200 hover:text-white mr-4"
-            >
-              Examples
-            </a>
-            <a
-              href="#responsive-header"
-              className="block mt-4 tablet:inline-block tablet:mt-0 text-green-200 hover:text-white"
-            >
-              Blog
-            </a>
+            {sections.map(({ link, title }) => (
+              <Link
+                to={link}
+                className="block mt-4 tablet:inline-block tablet:mt-0 text-green-200 hover:text-white mr-4"
+              >
+                {title}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
@@ -77,11 +74,12 @@ const Footer = () => {
 export const Page: FunctionComponent<PageProps> = ({
   siteTitle,
   pageTitle,
+  sections,
   children,
 }) => {
   return (
     <div className="flex flex-col min-h-screen min-w-full">
-      <Header siteTitle={siteTitle} />
+      <Header siteTitle={siteTitle} sections={sections} />
       <main className="flex-grow">
         <Heading title={pageTitle}></Heading>
         <section>{children}</section>

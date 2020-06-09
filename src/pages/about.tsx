@@ -5,18 +5,21 @@ import Page from '../layouts/page';
 const AboutPage = ({
   data: {
     site: {
-      siteMetadata: { title: siteTitle },
+      siteMetadata: { title: siteTitle, sections },
     },
   },
 }: {
   data: {
     site: {
-      siteMetadata: { title: string };
+      siteMetadata: {
+        title: string;
+        sections: { link: string; title: string }[];
+      };
     };
   };
 }) => {
   return (
-    <Page siteTitle={siteTitle} pageTitle="About">
+    <Page siteTitle={siteTitle} pageTitle="About" sections={sections}>
       <h2>About</h2>
     </Page>
   );
@@ -27,6 +30,10 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        sections {
+          link
+          title
+        }
       }
     }
   }

@@ -1,6 +1,11 @@
 module.exports = {
     siteMetadata: {
-        title: `A Site By Paul Bennett-Freeman`
+        title: `A Site By Paul Bennett-Freeman`,
+        sections: [
+            { title: 'About', link: '/about' },
+            { title: '404', link: '/404' }
+
+        ]
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
