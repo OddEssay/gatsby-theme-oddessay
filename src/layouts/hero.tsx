@@ -1,9 +1,9 @@
-import * as React from "react";
-import Link from "gatsby-link";
-import { Helmet } from "react-helmet";
-import { Heading, Title } from "../components/typeography";
+import * as React from 'react';
+import Link from 'gatsby-link';
+import { Helmet } from 'react-helmet';
+import { Heading, Title } from '../components/typeography';
 
-import * as styles from "./index.css";
+import * as styles from './index.css';
 
 interface HeroLayoutProps {
   children: any;
@@ -20,7 +20,7 @@ interface SectionMenuItemProps {
   section: Section;
 }
 
-const isExternalUrl = (url: string) => url.includes("http");
+const isExternalUrl = (url: string) => url.includes('http');
 
 const SectionMenuItem = ({ section }: SectionMenuItemProps) => (
   <div className="bg-gray-200 m-4 rounded shadow h-16">
@@ -38,14 +38,14 @@ class HeroLayout extends React.PureComponent<HeroLayoutProps, void> {
     return (
       <div className="h-full">
         <Helmet
-          title="Paul Bennett-Freeman's Site Theme"
+          title={this.props.siteTitle}
           meta={[
             {
-              name: "description",
+              name: 'description',
               content:
-                "The theme used across sites created by Paul Bennett-Freeman"
+                'The theme used across sites created by Paul Bennett-Freeman',
             },
-            { name: "keywords", content: "gatsby theme" }
+            { name: 'keywords', content: 'gatsby theme' },
           ]}
         />
         <div className="w-full tablet:flex">
@@ -56,8 +56,11 @@ class HeroLayout extends React.PureComponent<HeroLayoutProps, void> {
           </div>
 
           <div className="w-full tablet:w-2/5">
-            {this.props.sections.map(section => (
-              <SectionMenuItem section={section}></SectionMenuItem>
+            {this.props.sections.map((section, i) => (
+              <SectionMenuItem
+                key={`section_${i}`}
+                section={section}
+              ></SectionMenuItem>
             ))}
           </div>
         </div>
