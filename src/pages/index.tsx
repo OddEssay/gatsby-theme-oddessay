@@ -2,8 +2,7 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { graphql } from 'gatsby';
 import { Text } from '../components/typeography';
-import { Card } from '../components/cards';
-import storybookImg from './storybook.png';
+import { Box, Card } from '../components/cards';
 
 import HeroLayout from '../layouts/hero';
 
@@ -15,26 +14,30 @@ interface IndexPageProps {
         sections: { link: string; title: string }[];
       };
     };
+    file: {
+      childImageSharp: { fluid: object };
+    };
   };
 }
-
-export default class extends React.Component<IndexPageProps, {}> {
-  constructor(props: IndexPageProps, context: any) {
-    super(props, context);
-  }
-  public render() {
-    return (
-      <HeroLayout
-        siteTitle={this.props.data.site.siteMetadata.title}
-        sections={this.props.data.site.siteMetadata.sections}
-      >
-        <Card title="Storybook" backgroundImage={storybookImg}>
+const index = (props: IndexPageProps) => {
+  return (
+    <HeroLayout
+      siteTitle={props.data.site.siteMetadata.title}
+      sections={props.data.site.siteMetadata.sections}
+    >
+      <Box>
+        <Card
+          title="Storybook"
+          backgroundImageFluid={props.data.file.childImageSharp.fluid}
+        >
           <Link to="/storybook/">View the Storybook for this theme.</Link>
         </Card>
-      </HeroLayout>
-    );
-  }
-}
+      </Box>
+    </HeroLayout>
+  );
+};
+
+export default index;
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -44,6 +47,13 @@ export const pageQuery = graphql`
         sections {
           link
           title
+        }
+      }
+    }
+    file(relativePath: { eq: "storybook.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
