@@ -5,6 +5,7 @@ import { Text } from '../components/typeography';
 import { Box, Card } from '../components/cards';
 
 import HeroLayout from '../layouts/hero';
+import { IFluidObject } from 'gatsby-background-image';
 
 interface IndexPageProps {
   data: {
@@ -15,7 +16,7 @@ interface IndexPageProps {
       };
     };
     file: {
-      childImageSharp: { fluid: object };
+      childImageSharp: { fluid: IFluidObject };
     };
   };
 }
@@ -30,7 +31,7 @@ const index = (props: IndexPageProps) => {
           title="Storybook"
           backgroundImageFluid={props.data.file.childImageSharp.fluid}
         >
-          <Link to="/storybook/">View the Storybook for this theme.</Link>
+          <a href="/storybook/">View the Storybook for this theme.</a>
         </Card>
       </Box>
     </HeroLayout>
