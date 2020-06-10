@@ -5,36 +5,17 @@ import { Title } from '../typeography';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Img from 'gatsby-image';
+import BackgroundImage, { IFluidObject } from 'gatsby-background-image';
 export interface CardProps {
   title?: string;
-  backgroundImage?: string;
+  backgroundImageFluid?: IFluidObject;
   footnote?: string;
   children: React.ReactNode;
 }
 
-export default function CardBackgroundImage() {
-  const data = {
-    file: {
-      childImageSharp: {
-        fixed: {
-          base64:
-            'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDAf/EABYBAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABpY4WlWhGM5PfAf/EABwQAAICAgMAAAAAAAAAAAAAAAABAhIDERQhMf/aAAgBAQABBQLoqVJSsuQxZdjJe7P/xAAXEQADAQAAAAAAAAAAAAAAAAAAEBES/9oACAEDAQE/AYZf/8QAFhEBAQEAAAAAAAAAAAAAAAAAEgAQ/9oACAECAQE/AVLf/8QAGRAAAQUAAAAAAAAAAAAAAAAAEAERICEi/9oACAEBAAY/AjphaQ//xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMRBRQWFx/9oACAEBAAE/IXwcM04HWGd9Roq6TH2KLze2Z7iTaWn/2gAMAwEAAgADAAAAEDcv/f/EABcRAQADAAAAAAAAAAAAAAAAABABITH/2gAIAQMBAT8Qvgg//8QAFxEBAAMAAAAAAAAAAAAAAAAAEAEhMf/aAAgBAgEBPxCmmT//xAAdEAEAAwACAwEAAAAAAAAAAAABABEhMVFBYYGR/9oACAEBAAE/EGLF0KZdDXJEjtH2LzDS2rsfDDbR8DPfeIgIp8N1+S5tOe5gEV1Dsn//2Q==',
-          width: 125,
-          height: 125,
-          src:
-            '/static/85286dec8ad1e45033cb46c9bd73aebb/bac10/58f8558ecb60b4a114572f0cc78478d1.jpg',
-          srcSet:
-            '/static/85286dec8ad1e45033cb46c9bd73aebb/bac10/58f8558ecb60b4a114572f0cc78478d1.jpg 1x,\n/static/85286dec8ad1e45033cb46c9bd73aebb/1b59b/58f8558ecb60b4a114572f0cc78478d1.jpg 1.5x,\n/static/85286dec8ad1e45033cb46c9bd73aebb/034c8/58f8558ecb60b4a114572f0cc78478d1.jpg 2x',
-        },
-      },
-    },
-  };
-  return <Img fixed={data.file.childImageSharp.fixed} />;
-}
-
 export const Card = ({
   title,
-  backgroundImage,
+  backgroundImageFluid,
   footnote,
   children,
 }: CardProps) => (
@@ -46,15 +27,14 @@ export const Card = ({
         </div>
       )}
 
-      {backgroundImage && (
-        <div
+      {backgroundImageFluid && (
+        <BackgroundImage
+          Tag="div"
           className="card-content h-32 bg-cover"
-          style={{ backgroundImage: `url("${backgroundImage}")` }}
-        ></div>
+          fluid={backgroundImageFluid}
+        ></BackgroundImage>
       )}
-      <div className="card-content h-32 bg-cover">
-        <CardBackgroundImage />
-      </div>
+
       <div className="card-content bg-gray-100">{children}</div>
 
       {footnote && (
