@@ -1,4 +1,4 @@
-import {Card} from './card'
-import {Box} from './box'
+import { Card } from './card';
+import { Box } from './box';
 
-export {Box,Card}
+export { Box, Card };

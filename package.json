@@ -47,13 +47,12 @@
     ],
     "main": "n/a",
     "scripts": {
-        "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
         "develop": "gatsby develop",
-        "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
+        "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
         "storybook": "NODE_ENV=production start-storybook -s ./public -p 6006 --ci",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
-        "prettier": "^2.0.5"
+        "prettier": "2.0.5"
     }
 }

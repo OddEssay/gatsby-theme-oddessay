@@ -1,5 +1,5 @@
-import {Heading} from './heading';
-import {Text} from './text'
-import {Title} from './title'
+import { Heading } from './heading';
+import { Text } from './text';
+import { Title } from './title';
 
-export {Heading,Text, Title}
+export { Heading, Text, Title };

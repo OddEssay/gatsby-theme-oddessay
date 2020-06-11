@@ -1,12 +1,12 @@
 div.card-content:nth-child(1) {
-    @apply rounded-t
+  @apply rounded-t;
 }
 div.card-content:last-child {
-    @apply rounded-b
+  @apply rounded-b;
 }
 div.card-title {
-    @apply text-gray-900
+  @apply text-gray-900;
 }
 .dark div.card-title {
-    @apply text-gray-100
+  @apply text-gray-100;
 }

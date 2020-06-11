@@ -25,7 +25,7 @@ module.exports = {
                     identifier: process.env.STRAPI_USER,
                     password: process.env.STRAPI_PASSWORD
                 }
-            }
+            },
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
