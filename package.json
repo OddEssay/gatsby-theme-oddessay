@@ -1,7 +1,7 @@
 {
     "name": "gatsby-theme-oddessay",
-    "description": "A Site By Paul Bennett-Freeman",
-    "version": "1.0.0",
+    "description": "Paul Bennett-Freeman's Gatsby Theme",
+    "version": "1.1.0",
     "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
     "dependencies": {
         "@babel/core": "7.10.2",
@@ -50,7 +50,8 @@
         "develop": "gatsby develop",
         "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
         "storybook": "NODE_ENV=production start-storybook -s ./public -p 6006 --ci",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "./postinstall.sh"
     },
     "devDependencies": {
         "prettier": "2.0.5"
