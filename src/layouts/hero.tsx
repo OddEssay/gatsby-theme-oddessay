@@ -2,19 +2,11 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 import { Heading, Title } from '../components/typeography';
+import { BaseLayout, BaseProps } from './base';
 
 import * as styles from './index.css';
 
-interface HeroLayoutProps {
-  children: any;
-  siteTitle: string;
-  sections: Section[];
-}
-
-interface Section {
-  title: string;
-  link: string;
-}
+export interface HeroLayoutProps extends BaseProps {}
 
 interface SectionMenuItemProps {
   section: Section;
@@ -35,43 +27,39 @@ const SectionMenuItem: React.FunctionComponent<SectionMenuItemProps> = ({
   </div>
 );
 
-const HeroLayout: React.FunctionComponent<HeroLayoutProps> = ({
-  siteTitle,
-  sections,
+export const HeroLayout: React.FunctionComponent<HeroLayoutProps> = ({
+  siteInformation,
+  pageTitle,
   children,
 }) => {
+  console.log('Hero Data', siteInformation, pageTitle);
+  const {
+    siteMetadata: { siteTitle, sections },
+  } = siteInformation;
+
   return (
-    <div className="h-full">
-      <Helmet
-        title={siteTitle}
-        meta={[
-          {
-            name: 'description',
-            content:
-              'The theme used across sites created by Paul Bennett-Freeman',
-          },
-          { name: 'keywords', content: 'gatsby theme' },
-        ]}
-      />
-      <div className="w-full tablet:flex">
-        <div className="w-full tablet:w-3/5">
-          <div className="rounded shadow bg-gray-200  ml-12 mr-12 mt-4">
-            <Heading title={siteTitle} />
+    <BaseLayout siteInformation={siteInformation}>
+      <div className="h-full">
+        <div className="w-full tablet:flex">
+          <div className="w-full tablet:w-3/5">
+            <div className="rounded shadow bg-gray-200  ml-12 mr-12 mt-4">
+              <Heading title={siteTitle} />
+            </div>
+          </div>
+
+          <div className="w-full tablet:w-2/5">
+            {sections.map((section, i) => (
+              <SectionMenuItem
+                key={`section_${i}`}
+                section={section}
+              ></SectionMenuItem>
+            ))}
           </div>
         </div>
 
-        <div className="w-full tablet:w-2/5">
-          {sections.map((section, i) => (
-            <SectionMenuItem
-              key={`section_${i}`}
-              section={section}
-            ></SectionMenuItem>
-          ))}
-        </div>
+        <div className="w-full">{children}</div>
       </div>
-
-      <div className="w-full">{children}</div>
-    </div>
+    </BaseLayout>
   );
 };
 

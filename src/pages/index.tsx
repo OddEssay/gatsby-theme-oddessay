@@ -4,32 +4,27 @@ import { graphql } from 'gatsby';
 import { Text } from '../components/typeography';
 import { Box, Card } from '../components/cards';
 
-import HeroLayout from '../layouts/hero';
+import HeroLayout, { HeroLayoutProps } from '../layouts/hero';
 import { IFluidObject } from 'gatsby-background-image';
+import { SiteInformation } from '../layouts/base';
 
 interface IndexPageProps {
   data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        sections: { link: string; title: string }[];
-      };
-    };
+    siteInformation: SiteInformation;
     file: {
       childImageSharp: { fluid: IFluidObject };
     };
   };
 }
-const index = (props: IndexPageProps) => {
+const index: React.FunctionComponent<IndexPageProps> = ({
+  data: { file, siteInformation },
+}) => {
   return (
-    <HeroLayout
-      siteTitle={props.data.site.siteMetadata.title}
-      sections={props.data.site.siteMetadata.sections}
-    >
+    <HeroLayout siteInformation={siteInformation}>
       <Box>
         <Card
           title="Storybook"
-          backgroundImageFluid={props.data.file.childImageSharp.fluid}
+          backgroundImageFluid={file.childImageSharp.fluid}
         >
           <a href="/storybook/">View the Storybook for this theme.</a>
         </Card>
@@ -42,15 +37,7 @@ export default index;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
-        sections {
-          link
-          title
-        }
-      }
-    }
+    ...SiteInformation
     file(relativePath: { eq: "storybook.png" }) {
       childImageSharp {
         fluid {
