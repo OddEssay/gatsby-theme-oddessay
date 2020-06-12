@@ -1,8 +1,8 @@
-#/bin/bash
+#/bin/sh
 
 echo "🔮 Sync files from theme where we want local duplicates"
 
-if [ "$INIT_CWD" == "$PWD" ]; then
+if [ "$INIT_CWD" = "$PWD" ]; then
   echo "👀 Skipping postinstall for local package installation"
   exit 0
 fi
