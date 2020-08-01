@@ -28,7 +28,7 @@
         "gatsby-plugin-react-helmet": "3.3.4",
         "gatsby-plugin-sharp": "^2.6.11",
         "gatsby-plugin-typescript": "2.4.6",
-        "gatsby-source-filesystem": "^2.3.11",
+        "gatsby-source-filesystem": "^2.3.23",
         "gatsby-source-strapi": "0.0.12",
         "gatsby-transformer-sharp": "^2.5.5",
         "gatsby-transformer-typescript-css-modules": "1.0.14",
